@@ -1,0 +1,144 @@
+:root {
+  --white: #ffffff;
+  --off-white: #e5e5e5;
+  --glass: rgba(255, 255, 255, 0.089);
+  --glass-light: rgba(255, 255, 255, 0.301);
+  --blue-1: #62b8f5;
+  --blue-2: #4475ef;
+  --shadow: rgba(3, 46, 87, 0.25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("https://images.pexels.com/photos/3008509/pexels-photo-3008509.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* -------- Container -------- */
+.container {
+  width: 100%;
+  max-width: 480px;
+  background: var(--glass-light);
+  backdrop-filter: blur(8px);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--glass);
+  box-shadow: 0 10px 35px var(--shadow);
+  color: rgb(5, 41, 51);
+}
+
+/* -------- Headings -------- */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* -------- Form -------- */
+form {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+}
+
+input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid var(--white);
+  background: transparent;
+  outline: none;
+  color: rgb(5, 41, 51);
+}
+
+input::placeholder {
+  color: rgba(5, 41, 51, 0.6);
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  border: none;                  /* remove border for clean look */
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;                   /* text color */
+  background: linear-gradient(135deg, #62b8f5, #4475ef); /* vibrant gradient */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #4475ef, #62b8f5); /* invert gradient on hover */
+}
+
+.btn:active {
+  transform: translateY(0px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* -------- Weather Card -------- */
+.weather {
+  display: flex;
+  gap: 1rem;
+}
+
+.left,
+.right {
+  flex: 1;
+  background: var(--glass-light);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.left h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.left h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.icon img {
+  width: 90px;
+}
+
+.condition {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+/* -------- Date -------- */
+.date {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 520px) {
+  .weather {
+    flex-direction: column;
+  }
+}
